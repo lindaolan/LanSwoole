@@ -17,9 +17,9 @@
 		"email": "lindaolan@126.com",
 		"homepage": "https://github.com/lindaolan"
 	}],
-	"name": "lindaolan/lanframework",
+	"name": "lindaolan/lanswoole",
 	"type": "library",
-	"keywords": ["server", "framework", "lindaolan"],
+	"keywords": ["swoole", "server", "framework", "lindaolan"],
 	"description": "In order to develop the api server",
 	"license": "Apache-2.0"
 }
