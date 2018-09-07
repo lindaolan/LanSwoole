@@ -1,9 +1,18 @@
 <?php
-namespace src\Model;
+namespace Application\Model;
 
-use Model\Model;
+use Framework\Model\Model;
 
 class User extends Model
 {
 
+    public function getUserName()
+    {
+        return parent::getModelName();
+    }
+
+    public function setUserName($name)
+    {
+        parent::setModelName($name);
+    }
 }
