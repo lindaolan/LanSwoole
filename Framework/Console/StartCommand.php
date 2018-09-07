@@ -17,24 +17,8 @@ class StartCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("<comment> HelloWorld, " . $this->msg . "</comment>");
-        $http = new \swoole_http_server("0.0.0.0", 9501);
-
-        $http->set([
-            'worker_num' => 4, //工作进程数
-            'daemonize' => true, //是否后台运行
-        ]);
-
-        $http->on("start", function ($server) {
-            echo "Swoole http server is started! have fun...\n";
-        });
-
-        $http->on("request", function ($request, $response) {
-            $path = $request->server['path_info'];
-            $response->header("Content-Type", "text/plain");
-            $response->end("$path Hello World\n");
-        });
-
-        $http->start();
+        $output->writeln("<comment> Server start running, have fun ... </comment>");
+        $server = new \SwooleHttpServer();
+        $server->start();
     }
 }
