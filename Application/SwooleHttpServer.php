@@ -1,5 +1,7 @@
 <?php
 
+namespace Application;
+
 class SwooleHttpServer
 {
     private $server;
